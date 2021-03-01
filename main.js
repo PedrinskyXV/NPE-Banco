@@ -10,10 +10,11 @@ function formateoNPE() {
    for (var i=0; i < result.length; i++) {
       y += result[i] + "-";
    }
-
+    document.getElementById("txtResult").style.visibility = "visible";
     document.getElementById("txtResult").innerHTML = "NPE: " + y;
 }
 
-function hola() {
-    alert('HOLA');
+function limpiarResult() {
+    document.getElementById("txtResult").style.visibility = "hidden";
+    y = 0;
 }
