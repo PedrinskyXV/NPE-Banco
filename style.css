@@ -1,12 +1,62 @@
-.titCard, #txtResult{
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  height: 100px;
 }
 
-.card{
-    -webkit-box-shadow: 10px 10px 108px 0px rgba(255,255,255,0.57);
-    -moz-box-shadow: 10px 10px 108px 0px rgba(255,255,255,0.57);
-    box-shadow: 10px 10px 108px 0px rgba(255,255,255,0.57);
-    margin: 150px;
+.titCard,
+#txtResult {
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
 }
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.card {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+

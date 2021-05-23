@@ -1,43 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="visa.png" />
-    <title>NPE - ByPedrinsky</title>    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-secondary">    
-
+    <title>NPE - ByPedrinsky</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dark">
     <div class="container-fluid">
-        <div class="row">
-            <div class="card col-lg-4 col-sm-12 d-flex align-content-center align-content-center mx-auto text-center bg-dark">
-                <div class="card-header">
-                    <span class="titCard">Formateo de NPE</span>
-                </div>
-                <div class="card-body">
-                  <div>
-                    <img src="tarjeta-de-credito.svg" alt="tarjeta-de-credito" class="img-fluid w-50 h-50 mb-5">
-                  </div>
-                  <form>
-                    <div class="row g-3 align-items-center mb-3">
-                      <input type="text" id="txtNPE" class="form-control" placeholder="NPE">
-                    </div>
-                    <div class="row g-3 align-items-center mb-3">
-                      <p id="txtResult"></p>
-                    </div>
-                    <button type="button" class="btn btn-outline-warning" onclick="formateoNPE()">Formatear</button>
-                    <button type="reset" class="btn btn-outline-danger" onclick="limpiarResult()">Limpiar</button>
-                  </form>
-                </div>
-                <div class="card-footer text-muted">
-                  ByPedrinsky
-                </div>
+      <div class="row">
+        <div class="center">
+          <div class="card shadow-lg col-lg-6 col-sm-12 mx-auto">
+            <div class="card-header">
+              <span
+                class="titCard display-6 fw-bolder d-flex align-content-center justify-content-center text-light"
+                >Formateo de NPE</span
+              >
             </div>
+            <br />
+            <div class="card-body">
+              <!-- <div class="d-flex align-content-center justify-content-center">
+                <img src="tarjeta-de-credito.svg" alt="tarjeta-de-credito" class="img-fluid w-25 h-25 mb-5">
+              </div> -->
+              <form>
+                <div class="col-xl-8 col-sm-12 mx-auto mb-3">
+                  <div class="form-outline mb-3 form-white">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="txtNPE"
+                      placeholder="####-####-#### ..."
+                    />
+                    <label class="form-label" for="txtNPE">NPE</label>
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center mb-3"
+                >
+                  <p id="txtResult"></p>
+                </div>
+                <div class="text-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating btn-lg"
+                    onclick="formateoNPE()"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Formatear"
+                  >
+                    <span
+                      class="material-icons md-48 d-flex align-content-center justify-content-center"
+                    >
+                      &#xF045;
+                    </span>
+                  </button>
+                  &nbsp;&nbsp;&nbsp;
+                  <button
+                    type="reset"
+                    class="btn btn-danger btn-floating btn-lg"
+                    onclick="limpiarResult()"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Limpiar"
+                  >
+                    <span
+                      class="material-icons md-48 d-flex align-content-center justify-content-center"
+                      >&#xE14C;</span
+                    >
+                  </button>
+                </div>
+              </form>
+              <br />
+            </div>
+            <div
+              class="card-footer text-muted d-flex align-content-center justify-content-center"
+            >
+              <span class="material-icons md-48">&#xE263;</span>ByPedrinsky
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
